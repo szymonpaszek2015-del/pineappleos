@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pineapple OS – Coming Soon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f9d71c, #4caf50);
+      color: #333;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #2e7d32;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      color: #444;
+    }
+    .countdown {
+      font-size: 1.6rem;
+      margin-top: 30px;
+      background: #fff3cd;
+      color: #333;
+      padding: 15px 25px;
+      border-radius: 12px;
+      border: 2px solid #fbc02d;
+      display: inline-block;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Pineapple OS</h1>
+  <p>A fresh, secure, and open-source operating system in development.</p>
+  <div class="countdown" id="countdown">⏳ Loading countdown...</div>
+  
+  <footer>
+    <p>© 2025 Pineapple OS Project | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // ⚡ Set your release date here:
+    const releaseDate = new Date("October 4, 2025 18:20:00").getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = releaseDate - now;
+
+      if (distance <= 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "🚀 Pineapple OS is Released!";
+      } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
