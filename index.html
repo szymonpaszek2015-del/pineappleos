@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RevoltOS – Coming Soon!</title>
+  <title>Waywater – Coming Soon!</title>
   <style>
     /* Użycie czcionek systemowych dla profesjonalnego wyglądu */
     body {
@@ -70,7 +70,7 @@
   </style>
 </head>
 <body>
-  <h1>Welcome to RevoltOS</h1>
+  <h1>Welcome to Waywater</h1>
   <p>A fresh, secure, and open-source operating system in development.</p>
   <div class="countdown" id="countdown">⏳ Loading countdown...</div>
   
@@ -90,7 +90,7 @@
 
       if (distance <= 0) {
         clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "🚀 RevoltOS is Released!";
+        document.getElementById("countdown").innerHTML = "🚀 Waywater is Released!";
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -100,7 +100,7 @@
         document.getElementById("countdown").innerHTML =
           days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
       }
-    }, 1000); /* Zmieniono interwał na 1000ms, aby odliczanie było płynniejsze */
+    }, 800); /* Zmieniono interwał na 1000ms, aby odliczanie było płynniejsze */
   </script>
 </body>
 </html>
